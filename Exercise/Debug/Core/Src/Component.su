@@ -1,5 +1,5 @@
 Component.c:3:6:GetROW	16	static
 Component.c:14:6:GetCOL	16	static
 Component.c:25:10:convert_to_binary_array	24	static
-Component.c:94:10:getChar	16	static
-Component.c:126:6:updateLEDMatrix	24	static
+Component.c:114:10:getChar	16	static
+Component.c:157:6:updateLEDMatrix	24	static
