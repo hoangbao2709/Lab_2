@@ -160,6 +160,9 @@ void updateLEDMatrix (int index ){
 	free(binary_array_1);
 }
 
+uint8_t so9[8] = {0xC3, 0x81, 0x99, 0x99, 0x83, 0x9F, 0x99, 0xC3};
+Led = {0x9F,0x99,0xC3,FF,FF,FF,FF,FF};
+
 void Chay1Chu(char str) {
     uint8_t* chu = getChar(str);
     for (int h = 7; h >= 0; h--) {

@@ -1,4 +1,4 @@
-11:47:25 **** Incremental Build of configuration Debug for project Exercise ****
+23:05:25 **** Incremental Build of configuration Debug for project Exercise ****
 make -j20 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'toUpperCase':
@@ -31,16 +31,16 @@ arm-none-eabi-size   Exercise.elf
 arm-none-eabi-objdump -h -S  Exercise.elf  > "Exercise.list"
 arm-none-eabi-objcopy  -O ihex  Exercise.elf  "Exercise.hex"
    text	   data	    bss	    dec	    hex	filename
-   9220	    408	   1688	  11316	   2c34	Exercise.elf
+   9212	    408	   1688	  11308	   2c2c	Exercise.elf
 arm-none-eabi-objcopy  -O binary  Exercise.elf  "Exercise.bin"
 Finished building: default.size.stdout
  
 Finished building: Exercise.hex
+ 
 Finished building: Exercise.bin
- 
- 
 Finished building: Exercise.list
  
+ 
 
-11:47:26 Build Finished. 0 errors, 5 warnings. (took 435ms)
+23:05:26 Build Finished. 0 errors, 5 warnings. (took 435ms)
 

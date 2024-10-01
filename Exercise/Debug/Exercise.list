@@ -7,23 +7,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
   1 .text         000021c8  0800010c  0800010c  0001010c  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .rodata       00000130  080022d4  080022d4  000122d4  2**2
+  2 .rodata       00000128  080022d4  080022d4  000122d4  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  3 .ARM.extab    00000000  08002404  08002404  00020190  2**0
+  3 .ARM.extab    00000000  080023fc  080023fc  00020190  2**0
                   CONTENTS
-  4 .ARM          00000000  08002404  08002404  00020190  2**0
+  4 .ARM          00000000  080023fc  080023fc  00020190  2**0
                   CONTENTS
-  5 .preinit_array 00000000  08002404  08002404  00020190  2**0
+  5 .preinit_array 00000000  080023fc  080023fc  00020190  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  6 .init_array   00000004  08002404  08002404  00012404  2**2
+  6 .init_array   00000004  080023fc  080023fc  000123fc  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  7 .fini_array   00000004  08002408  08002408  00012408  2**2
+  7 .fini_array   00000004  08002400  08002400  00012400  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  8 .data         00000190  20000000  0800240c  00020000  2**2
+  8 .data         00000190  20000000  08002404  00020000  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  9 .bss          00000094  20000190  0800259c  00020190  2**2
+  9 .bss          00000094  20000190  08002594  00020190  2**2
                   ALLOC
- 10 ._user_heap_stack 00000604  20000224  0800259c  00020224  2**0
+ 10 ._user_heap_stack 00000604  20000224  08002594  00020224  2**0
                   ALLOC
  11 .ARM.attributes 00000029  00000000  00000000  00020190  2**0
                   CONTENTS, READONLY
@@ -539,7 +539,6 @@ void Chay1Chu(char str) {
  800052c:	4618      	mov	r0, r3
  800052e:	f7ff fedb 	bl	80002e8 <getChar>
  8000532:	60f8      	str	r0, [r7, #12]
-
     for (int h = 7; h >= 0; h--) {
  8000534:	2307      	movs	r3, #7
  8000536:	617b      	str	r3, [r7, #20]
@@ -766,7 +765,7 @@ int main(void)
  8000670:	2b07      	cmp	r3, #7
  8000672:	ddf4      	ble.n	800065e <main+0x22>
 	  }
-	  const char *Chuoi = "Baooo2709";
+	  const char *Chuoi = "BAO";
  8000674:	4b20      	ldr	r3, [pc, #128]	; (80006f8 <main+0xbc>)
  8000676:	607b      	str	r3, [r7, #4]
 	  toUpperCase(Chuoi);
@@ -1726,7 +1725,7 @@ LoopFillZerobss:
   ldr r1, =_edata
  8000acc:	20000190 	.word	0x20000190
   ldr r2, =_sidata
- 8000ad0:	0800240c 	.word	0x0800240c
+ 8000ad0:	08002404 	.word	0x08002404
   ldr r2, =_sbss
  8000ad4:	20000190 	.word	0x20000190
   ldr r4, =_ebss
@@ -4083,7 +4082,7 @@ if (((RCC_ClkInitStruct->ClockType) & RCC_CLOCKTYPE_PCLK1) == RCC_CLOCKTYPE_PCLK
  80017ea:	bf00      	nop
  80017ec:	40022000 	.word	0x40022000
  80017f0:	40021000 	.word	0x40021000
- 80017f4:	080022e0 	.word	0x080022e0
+ 80017f4:	080022d8 	.word	0x080022d8
  80017f8:	20000120 	.word	0x20000120
  80017fc:	20000124 	.word	0x20000124
 
@@ -4218,8 +4217,8 @@ uint32_t HAL_RCC_GetSysClockFreq(void)
  8001892:	bf00      	nop
  8001894:	40021000 	.word	0x40021000
  8001898:	007a1200 	.word	0x007a1200
- 800189c:	080022f0 	.word	0x080022f0
- 80018a0:	08002300 	.word	0x08002300
+ 800189c:	080022e8 	.word	0x080022e8
+ 80018a0:	080022f8 	.word	0x080022f8
  80018a4:	003d0900 	.word	0x003d0900
 
 080018a8 <RCC_Delay>:
@@ -5813,10 +5812,10 @@ __weak void HAL_TIMEx_BreakCallback(TIM_HandleTypeDef *htim)
  80020da:	4798      	blx	r3
  80020dc:	3601      	adds	r6, #1
  80020de:	e7f2      	b.n	80020c6 <__libc_init_array+0x1e>
- 80020e0:	08002404 	.word	0x08002404
- 80020e4:	08002404 	.word	0x08002404
- 80020e8:	08002404 	.word	0x08002404
- 80020ec:	08002408 	.word	0x08002408
+ 80020e0:	080023fc 	.word	0x080023fc
+ 80020e4:	080023fc 	.word	0x080023fc
+ 80020e8:	080023fc 	.word	0x080023fc
+ 80020ec:	08002400 	.word	0x08002400
 
 080020f0 <malloc>:
  80020f0:	4b02      	ldr	r3, [pc, #8]	; (80020fc <malloc+0xc>)
@@ -6020,7 +6019,7 @@ __weak void HAL_TIMEx_BreakCallback(TIM_HandleTypeDef *htim)
  8002296:	bf08      	it	eq
  8002298:	3820      	subeq	r0, #32
  800229a:	4770      	bx	lr
- 800229c:	08002303 	.word	0x08002303
+ 800229c:	080022fb 	.word	0x080022fb
 
 080022a0 <__malloc_lock>:
  80022a0:	4801      	ldr	r0, [pc, #4]	; (80022a8 <__malloc_lock+0x8>)
