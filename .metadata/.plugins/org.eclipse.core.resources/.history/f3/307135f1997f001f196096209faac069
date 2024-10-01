@@ -23,7 +23,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "software_timer.h"
-#include "Component.h"
+#include "Component.c"
 #include "update7SEG.h"
 /* USER CODE END Includes */
 
