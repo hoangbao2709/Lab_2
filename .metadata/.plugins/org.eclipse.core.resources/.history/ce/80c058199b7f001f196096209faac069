@@ -292,7 +292,6 @@ static void MX_GPIO_Init(void)
 int count = 100;
 void HAL_TIM_PeriodElapsedCallback ( TIM_HandleTypeDef * htim )
 {
-	timerRun();
 	count --;
 	if( count <= 0){
 		count = 100;
