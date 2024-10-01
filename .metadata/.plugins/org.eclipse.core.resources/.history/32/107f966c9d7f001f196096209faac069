@@ -1,0 +1,20 @@
+/*
+ * updateClockBuffer.h
+ *
+ *  Created on: Oct 1, 2024
+ *      Author: PC
+ */
+
+#include "main.h"
+#include "Component.h"
+
+#ifndef INC_UPDATECLOCKBUFFER_H_
+#define INC_UPDATECLOCKBUFFER_H_
+
+int counter = 0, bit = 0;
+
+void update7SEG(int index);
+
+void updateClockBuffer ();
+
+#endif /* INC_UPDATECLOCKBUFFER_H_ */

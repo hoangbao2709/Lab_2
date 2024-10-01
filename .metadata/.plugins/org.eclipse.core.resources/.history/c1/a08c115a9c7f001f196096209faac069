@@ -1,0 +1,28 @@
+/*
+ * updateClockBuffer.c
+ *
+ *  Created on: Oct 1, 2024
+ *      Author: PC
+ */
+
+#include "updateClockBuffer.h"
+
+void updateClockBuffer (){
+	if(counter == 0){
+		if(bit == 0){
+			HAL_GPIO_WritePin(DOT_GPIO_Port, DOT_Pin, 0);
+			bit = 1;
+		}
+		else{
+			HAL_GPIO_WritePin(DOT_GPIO_Port, DOT_Pin, 1);
+			bit = 0;
+		}
+	}
+	if(counter++ == 1){
+		counter = 0;
+	}
+	update7SEG(index_led++);
+	if(index_led == 4){
+		index_led = 0;
+	}
+}

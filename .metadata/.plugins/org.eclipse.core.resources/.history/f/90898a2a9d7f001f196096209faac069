@@ -1,0 +1,11 @@
+/*
+ * update7SEG.c
+ *
+ *  Created on: Oct 1, 2024
+ *      Author: PC
+ */
+
+#include "update7SEG.h"
+#include "Component.h"
+
+
