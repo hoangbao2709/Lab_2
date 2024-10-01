@@ -49,7 +49,7 @@ uint8_t ChuZ[8];
 
 int x;
 
-uint8_t Chu[37][8];
+uint8_t Chu[26][8];
 
 uint8_t Led[8];
 

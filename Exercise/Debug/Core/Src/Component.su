@@ -1,7 +1,7 @@
 Component.c:3:6:GetROW	16	static
 Component.c:14:6:GetCOL	16	static
 Component.c:25:10:convert_to_binary_array	24	static
-Component.c:103:10:getChar	16	static
-Component.c:146:6:updateLEDMatrix	24	static
-Component.c:152:6:Chay1Chu	32	static
-Component.c:164:6:suLy	40	static
+Component.c:114:10:getChar	16	static
+Component.c:157:6:updateLEDMatrix	24	static
+Component.c:163:6:Chay1Chu	32	static
+Component.c:175:6:suLy	40	static

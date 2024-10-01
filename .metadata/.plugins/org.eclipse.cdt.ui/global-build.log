@@ -1,26 +1,29 @@
-11:13:07 **** Incremental Build of configuration Debug for project Exercise ****
+11:47:25 **** Incremental Build of configuration Debug for project Exercise ****
 make -j20 all 
-arm-none-eabi-gcc "../Core/Src/Component.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Component.d" -MT"Core/Src/Component.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/Component.o"
-../Core/Src/Component.c: In function 'convert_to_binary_array':
-../Core/Src/Component.c:26:37: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
-   26 |   uint8_t *binary_array = (uint8_t*)malloc(sizeof(uint8_t) * 8);
-      |                                     ^~~~~~
-../Core/Src/Component.c:26:37: warning: incompatible implicit declaration of built-in function 'malloc'
-../Core/Src/Component.c:2:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
-    1 | #include "Component.h"
-  +++ |+#include <stdlib.h>
-    2 | 
-../Core/Src/Component.c: In function 'updateLEDMatrix':
-../Core/Src/Component.c:149:2: warning: implicit declaration of function 'free' [-Wimplicit-function-declaration]
-  149 |  free(binary_array_1);
-      |  ^~~~
-../Core/Src/Component.c:149:2: warning: incompatible implicit declaration of built-in function 'free'
-../Core/Src/Component.c:149:2: note: include '<stdlib.h>' or provide a declaration of 'free'
-../Core/Src/Component.c: In function 'suLy':
-../Core/Src/Component.c:172:5: warning: incompatible implicit declaration of built-in function 'free'
-  172 |     free(binary_array_1);
-      |     ^~~~
-../Core/Src/Component.c:172:5: note: include '<stdlib.h>' or provide a declaration of 'free'
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'toUpperCase':
+../Core/Src/main.c:60:16: warning: implicit declaration of function 'toupper' [-Wimplicit-function-declaration]
+   60 |         *str = toupper((unsigned char)*str); // Chuyển ký tự thành chữ hoa
+      |                ^~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:108:16: warning: passing argument 1 of 'toUpperCase' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  108 |    toUpperCase(Chuoi);
+      |                ^~~~~
+../Core/Src/main.c:58:24: note: expected 'char *' but argument is of type 'const char *'
+   58 | void toUpperCase(char *str) {
+      |                  ~~~~~~^~~
+../Core/Src/main.c:109:17: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+  109 |    int length = strlen(Chuoi);
+      |                 ^~~~~~
+../Core/Src/main.c:109:17: warning: incompatible implicit declaration of built-in function 'strlen'
+../Core/Src/main.c:25:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   24 | #include "Component.h"
+  +++ |+#include <string.h>
+   25 | /* USER CODE END Includes */
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:266:2: warning: implicit declaration of function 'timerRun' [-Wimplicit-function-declaration]
+  266 |  timerRun ();
+      |  ^~~~~~~~
 arm-none-eabi-gcc -o "Exercise.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\VXL_2\Exercise\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Exercise.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: Exercise.elf
  
@@ -28,7 +31,7 @@ arm-none-eabi-size   Exercise.elf
 arm-none-eabi-objdump -h -S  Exercise.elf  > "Exercise.list"
 arm-none-eabi-objcopy  -O ihex  Exercise.elf  "Exercise.hex"
    text	   data	    bss	    dec	    hex	filename
-   8876	    408	   1688	  10972	   2adc	Exercise.elf
+   9220	    408	   1688	  11316	   2c34	Exercise.elf
 arm-none-eabi-objcopy  -O binary  Exercise.elf  "Exercise.bin"
 Finished building: default.size.stdout
  

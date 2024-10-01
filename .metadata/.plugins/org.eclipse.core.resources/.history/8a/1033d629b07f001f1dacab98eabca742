@@ -55,13 +55,6 @@ static void MX_TIM2_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void toUpperCase(char *str) {
-    while (*str) {
-        *str = toupper((unsigned char)*str); // Chuyển ký tự thành chữ hoa
-        str++; // Di chuyển đến ký tự tiếp theo
-    }
-}
-
 /* USER CODE END 0 */
 
 /**
@@ -104,8 +97,7 @@ int main(void)
 	  for (int i = 0; i < 8; i++) {
 		Led[i] = 0xFF;
 	  }
-	  const char *Chuoi = "Baooo2709";
-	  toUpperCase(Chuoi);
+	  const char *Chuoi = "BAO2709";
 	  int length = strlen(Chuoi);
 
 	  for (int i = 0; i < length; i++) {

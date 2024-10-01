@@ -104,8 +104,8 @@ int main(void)
 	  for (int i = 0; i < 8; i++) {
 		Led[i] = 0xFF;
 	  }
-	  const char *Chuoi = "Baooo2709";
-	  toUpperCase(Chuoi);
+	  const char *Chuoi = "bao2709";
+	  Chuoi = toUpperCase(Chuoi);
 	  int length = strlen(Chuoi);
 
 	  for (int i = 0; i < length; i++) {
