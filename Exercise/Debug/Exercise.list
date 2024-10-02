@@ -1566,10 +1566,10 @@ void SystemInit (void)
  80009de:	4770      	bx	lr
 
 080009e0 <update7SEG>:
-int index_led = 0;      // Định nghĩa biến
-int led_buffer[4] = {1, 2, 3, 4}; // Định nghĩa biến
-int counter = 0;        // Định nghĩa biến
-int bit = 0;           // Định nghĩa biến
+int index_led = 0;
+int led_buffer[4] = {1, 2, 3, 4};
+int counter = 0;
+int bit = 0;
 
 void update7SEG(int index){
  80009e0:	b580      	push	{r7, lr}

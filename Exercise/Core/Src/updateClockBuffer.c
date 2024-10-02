@@ -7,13 +7,13 @@
 
 #include "updateClockBuffer.h"
 
-int hour = 15;           // Định nghĩa biến
-int minute = 8;         // Định nghĩa biến
-int second = 50;        // Định nghĩa biến
-int index_led = 0;      // Định nghĩa biến
-int led_buffer[4] = {1, 2, 3, 4}; // Định nghĩa biến
-int counter = 0;        // Định nghĩa biến
-int bit = 0;           // Định nghĩa biến
+int hour = 15;
+int minute = 8;
+int second = 50;
+int index_led = 0;
+int led_buffer[4] = {1, 2, 3, 4};
+int counter = 0;
+int bit = 0;
 
 void update7SEG(int index){
 	switch (index){
