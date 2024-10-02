@@ -95,6 +95,10 @@ int main(void)
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start_IT (& htim2 );
+  HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, 1);
+  HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, 1);
+  HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, 1);
+  HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, 1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
