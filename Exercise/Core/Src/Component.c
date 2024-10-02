@@ -172,7 +172,7 @@ void Chay1Chu(char str) {
 }
 
 void suLy(uint8_t* chu){
-	for(int i = 0; i < 10; i++){
+	for(int i = 0; i < 5; i++){
 	 uint8_t number = 0xFE;
 	 	 for(int j = 0; j <= 8; j++){
 			 uint8_t *binary_array = convert_to_binary_array(number);

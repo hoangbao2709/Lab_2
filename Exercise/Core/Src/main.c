@@ -110,7 +110,7 @@ int main(void)
 
 	  for (int i = 0; i < length; i++) {
 		  Chay1Chu(Chuoi[i]);
-		  for (int h = 5; h >= 0; h--) {
+		  for (int h = 2; h >= 0; h--) {
 			  for (int z = 7; z > 0; z--) {
 				  Led[z] = Led[z - 1];
 			  }
