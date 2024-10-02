@@ -308,6 +308,7 @@ void HAL_TIM_PeriodElapsedCallback ( TIM_HandleTypeDef * htim )
 	if( count <= 0){
 		count = 100;
 		HAL_GPIO_TogglePin (LED_RED_GPIO_Port , LED_RED_Pin );
+		HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
 	}
 
 }
