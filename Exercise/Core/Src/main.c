@@ -296,18 +296,19 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-int count1 = 25, count2 = 100;
+int count1 = 125, count2 = 25;
 void HAL_TIM_PeriodElapsedCallback ( TIM_HandleTypeDef * htim )
 {
 	timerRun();
 	count1--;
 	count2--;
 	if(count1 <= 0){
-		count1 = 25;
+		count1 = 100;
 		HAL_GPIO_TogglePin (LED_RED_GPIO_Port , LED_RED_Pin );
 		HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
 	}
 	if(count2 <= 0){
+		count2 = 25;
 		updateClockBuffer();
 		if(index_led == 4){
 		  index_led = 0;
